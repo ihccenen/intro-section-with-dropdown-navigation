@@ -1,0 +1,185 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.43em 1em;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.logo {
+  display: flex;
+}
+
+.menu-btn {
+  align-self: flex-start;
+  background-color: transparent;
+  border: none;
+}
+
+.nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding-block: 1.3em;
+  padding-inline: 1.7em 1em;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: hsl(0, 0%, 98%);
+}
+
+.nav a {
+  display: inline-block;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.nav li:not(:nth-last-child(-n + 2)) a {
+  margin-bottom: 1.13rem;
+}
+
+.sub-menu {
+  display: none;
+  padding-inline: 1.44em;
+}
+
+.features:is(:hover, :focus-within) .sub-menu {
+  display: grid;
+}
+
+.company:is(:hover, :focus-within) .sub-menu {
+  display: grid;
+}
+
+.features > a::after,
+.company > a::after {
+  content: url(../../public/icon-arrow-down.svg);
+  padding-left: 1.75em;
+}
+
+.features:is(:hover, :focus-within) > a::after,
+.company:is(:hover, :focus-within) > a::after {
+  content: url(../../public/icon-arrow-up.svg);
+  filter: brightness(0%);
+}
+
+.sub-menu li a {
+  display: flex;
+  place-items: center;
+  gap: 1rem;
+}
+
+.close-menu-btn {
+  background-color: transparent;
+  border: none;
+  order: -1;
+  align-self: flex-end;
+  margin-bottom: 2em;
+}
+
+.login,
+.register {
+  text-align: center;
+}
+
+.login a,
+.register a {
+  padding: 0.7em 4.57em;
+}
+
+.register {
+  border: 2px solid hsl(0, 0%, 41%);
+  border-radius: 14px;
+}
+
+.register:is(:hover, :focus-within) {
+  border: 2px solid hsl(0, 0%, 8%);
+}
+
+.header :is(button:is(:hover, :focus-visible), a:is(:hover, :focus-visible)) {
+  color: hsl(0, 0%, 8%);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(0, 0%, 8%);
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 750px) {
+  .header {
+    justify-content: center;
+    padding-block: 1.65em;
+    gap: 2.5rem;
+  }
+
+  .sub-menu {
+    position: absolute;
+    box-shadow: 0px 0px 20px -10px hsl(0, 0%, 8%);
+    border-radius: 14px;
+    margin-top: 0.54rem;
+    padding: 1.22em 0.52em;
+  }
+
+  .features:is(:hover, :focus-within) .sub-menu {
+    transform: translateX(-34%);
+  }
+
+  .company:is(:hover, :focus-within) .sub-menu {
+    transform: translateX(13%);
+  }
+
+  .features > a::after,
+  .company > a::after {
+    padding-left: 0.81em;
+  }
+
+  .sub-menu li a {
+    padding: 0.45em 0;
+  }
+
+  .nav {
+    display: flex;
+    position: relative;
+    background-color: transparent;
+    flex-grow: 1;
+    padding: 0;
+  }
+
+  .nav > ul {
+    display: flex;
+  }
+
+  .login {
+    margin-inline: auto 1rem;
+  }
+
+  .nav a {
+    padding: 0.7em 1.34em;
+  }
+
+  .nav li:not(:nth-last-child(-n + 2)) a {
+    margin-bottom: 0;
+    padding-inline: 1em;
+  }
+
+  .close-menu-btn,
+  .menu-btn,
+  .overlay {
+    display: none;
+  }
+}

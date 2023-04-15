@@ -1,0 +1,160 @@
+.main {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  gap: 3.45rem;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.72rem;
+}
+
+.section p {
+  text-align: center;
+  padding: 1em;
+}
+
+.section h1 {
+  color: hsl(0, 0%, 8%);
+  font-size: 2.15rem;
+}
+
+.learn-more {
+  display: inline-block;
+  color: hsl(0, 0%, 98%);
+  font-weight: 600;
+  background-color: hsl(0, 0%, 8%);
+  margin-top: 1.05rem;
+  padding: 0.96em 1.5em;
+  border-radius: 14px;
+  border: 1px solid transparent;
+}
+
+.learn-more:hover {
+  border: 1px solid hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 8%);
+  background-color: hsl(0, 0%, 98%);
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.7em;
+  padding-inline: 1em;
+}
+
+@media (min-width: 751px) {
+  .main {
+    flex-direction: row;
+    padding: 2.43em 2.9em;
+    gap: 0;
+  }
+
+  .section {
+    justify-content: flex-end;
+    align-items: baseline;
+  }
+
+  .section h1 {
+    font-size: 2rem;
+  }
+
+  .make {
+    display: block;
+  }
+
+  .section p {
+    font-size: 1.14rem;
+    text-align: start;
+    font-weight: 500;
+    padding: 0;
+    max-width: 45ch;
+    margin-top: 0.95rem;
+  }
+
+  .learn-more {
+    padding: 1.2em 2.15em;
+  }
+
+  .links {
+    padding-inline: 0 1em;
+  }
+
+  .picture {
+    max-width: 480px;
+    flex: 1 1 0;
+  }
+
+  .databiz {
+    height: 14px;
+    width: auto;
+  }
+
+  .audiophile {
+    height: 23px;
+    width: auto;
+  }
+
+  .meet {
+    height: 16px;
+    width: auto;
+  }
+
+  .maker {
+    height: 14px;
+    width: auto;
+  }
+}
+
+@media (min-width: 915px) {
+  .section {
+    gap: 3rem;
+  }
+
+  .learn-more {
+    padding: 0.96em 1.35em;
+    margin-bottom: 3.33rem;
+  }
+
+  .databiz {
+    height: auto;
+  }
+
+  .audiophile {
+    height: auto;
+  }
+
+  .meet {
+    height: auto;
+  }
+
+  .maker {
+    height: auto;
+  }
+}
+
+@media (min-width: 1227px) {
+  .section {
+    gap: 2.12rem;
+  }
+
+  .section h1 {
+    font-size: 5rem;
+  }
+
+  .section p {
+    margin-top: 0.95rem;
+  }
+}
