@@ -1,3 +1,5 @@
+import { Epilogue } from 'next/font/google';
+import Header from './components/Header';
 import './globals.css';
 
 export const metadata = {
@@ -7,6 +9,8 @@ export const metadata = {
   },
 };
 
+const epilogue = Epilogue({ subsets: ['latin'] });
+
 export default function RootLayout({
   children,
 }: {
@@ -14,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={epilogue.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
