@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-around;
-  gap: 3.45rem;
+  gap: 2.9rem;
   max-width: 1440px;
   margin-inline: auto;
 }
@@ -16,17 +16,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.72rem;
-}
-
-.section p {
-  text-align: center;
-  padding: 1em;
+  gap: 0.6rem;
 }
 
 .section h1 {
   color: hsl(0, 0%, 8%);
   font-size: 2.15rem;
+  margin-bottom: 0.95rem;
+}
+
+.section p {
+  text-align: center;
+  font-weight: 500;
+  padding-inline: 1em;
 }
 
 .learn-more {
@@ -35,7 +37,8 @@
   font-weight: 600;
   background-color: hsl(0, 0%, 8%);
   margin-top: 1.05rem;
-  padding: 0.96em 1.5em;
+  padding: 0.92em 1.5em;
+  margin-bottom: 1.6rem;
   border-radius: 14px;
   border: 1px solid transparent;
 }
@@ -55,6 +58,26 @@
   padding-inline: 1em;
 }
 
+.databiz {
+  height: 14px;
+  width: auto;
+}
+
+.audiophile {
+  height: 23px;
+  width: auto;
+}
+
+.meet {
+  height: 16px;
+  width: auto;
+}
+
+.maker {
+  height: 14px;
+  width: auto;
+}
+
 @media (min-width: 751px) {
   .main {
     flex-direction: row;
@@ -69,6 +92,7 @@
 
   .section h1 {
     font-size: 2rem;
+    margin-bottom: 0;
   }
 
   .make {
@@ -85,7 +109,7 @@
   }
 
   .learn-more {
-    padding: 1.2em 2.15em;
+    padding: 1.28em 2.15em;
   }
 
   .links {
@@ -96,26 +120,6 @@
     max-width: 480px;
     flex: 1 1 0;
   }
-
-  .databiz {
-    height: 14px;
-    width: auto;
-  }
-
-  .audiophile {
-    height: 23px;
-    width: auto;
-  }
-
-  .meet {
-    height: 16px;
-    width: auto;
-  }
-
-  .maker {
-    height: 14px;
-    width: auto;
-  }
 }
 
 @media (min-width: 915px) {
@@ -124,7 +128,7 @@
   }
 
   .learn-more {
-    padding: 0.96em 1.35em;
+    padding: 1.18em 1.35em;
     margin-bottom: 3.33rem;
   }
 
@@ -147,7 +151,7 @@
 
 @media (min-width: 1227px) {
   .section {
-    gap: 2.12rem;
+    gap: 2.2rem;
   }
 
   .section h1 {
